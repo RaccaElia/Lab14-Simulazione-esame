@@ -66,7 +66,7 @@ class Model:
         ris = []
         for nodo in list(self.grafo.successors(parziale[-1])):
             if self.grafo[parziale[-1]][nodo]["weight"] > s:
-                if [parziale[-1], nodo] not in parziale:
+                if (parziale[-1], nodo) not in parziale:
                     ris.append(nodo)
         print(list(self.grafo.successors(parziale[-1])))
         print(ris)
